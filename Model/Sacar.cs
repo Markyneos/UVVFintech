@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UvvFintech.Model
 {
-    public class Depositar : ITransacao
+    public class Sacar : ITransacao
     {
         private int _id;
         public int Id { get => _id; }
@@ -20,7 +20,7 @@ namespace UvvFintech.Model
         private DateTime _dataHora;
         public DateTime DataHora { get => _dataHora; }
 
-        public Depositar(double valor, Conta conta)
+        public Sacar(double valor, Conta conta)
         {
             _valor = valor;
             _contaRelacionada = conta;
@@ -37,4 +37,5 @@ namespace UvvFintech.Model
             return $"Id: {Id}\nValor: {Valor}\nConta Relacionada: {ContaRelacionada}\nData/Hora: {DataHora}";
         }
     }
-}
+
+    }
