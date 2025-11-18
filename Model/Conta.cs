@@ -46,22 +46,9 @@ namespace UvvFintech.Model
             _saldo += valor;
             Transacoes.Add(new Depositar(valor, this));
         }
-        public bool CancelarTransacao(ITransacao transacao)
+         public bool CancelarTransacao(ITransacao transacao)
         {
-            if (transacao is Transferencia transferencia)
-            {
-                var conta2 = transferencia.ContaRelacionada2;
-                if (conta2.Transacoes.Contains(transacao))
-                {
-                    conta2.Transacoes.Remove(transacao);
-                }
-            }
-            if (Transacoes.Contains(transacao))
-            {
-                Transacoes.Remove(transacao);
-                return true;
-            }
-            return false;
+            return transacao.Cancelar();
         }
         public bool AumentarLimite(double valor)
         {
@@ -74,6 +61,14 @@ namespace UvvFintech.Model
                 _limiteSaque = valor;
                 return true;
             }
+        }
+        internal void SomarSaldo(double valor, ITransacaoInterna origem)
+        {
+            _saldo += valor;
+        }
+        internal void SubtrairSaldo(double valor, ITransacaoInterna origem)
+        {
+            _saldo -= valor;
         }
 
     }

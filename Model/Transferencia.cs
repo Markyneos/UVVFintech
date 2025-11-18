@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UvvFintech.Model
 {
-    public class Transferencia : ITransacao
+    public class Transferencia : ITransacao, ITransacaoInterna
     {
         private int _id;
         public int Id { get => _id; }
@@ -43,6 +43,18 @@ namespace UvvFintech.Model
             _contaRelacionada2 = conta2;
             _metodo = metodo;
             _dataHora = DateTime.Now;
+        }
+        public bool Cancelar()
+        {
+            if (ContaRelacionada.Transacoes.Contains(this) && ContaRelacionada2.Transacoes.Contains(this))
+            {
+                _contaRelacionada.Transacoes.Remove(this);
+                _contaRelacionada2.Transacoes.Remove(this);
+                _contaRelacionada.SomarSaldo(Valor, this);
+                _contaRelacionada2.SubtrairSaldo(Valor, this);
+                return true;
+            }
+            return false;
         }
     }
 }

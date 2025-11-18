@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UvvFintech.Model
 {
-    public class Sacar : ITransacao
+    public class Sacar : ITransacao, ITransacaoInterna
     {
         private int _id;
         public int Id { get => _id; }
@@ -37,6 +37,16 @@ namespace UvvFintech.Model
         public string GerarComprovante()
         {
             return $"Id: {Id}\nValor: {Valor}\nConta Relacionada: {ContaRelacionada}\nData/Hora: {DataHora}";
+        }
+        public bool Cancelar()
+        {
+            if (_contaRelacionada.Transacoes.Contains(this))
+            {
+                _contaRelacionada.Transacoes.Remove(this);
+                _contaRelacionada.SomarSaldo(Valor, this);
+                return true;
+            }
+            return false;
         }
     }
 

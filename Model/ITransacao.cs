@@ -15,5 +15,6 @@ namespace UvvFintech.Model
 
         public bool Autorizar();
         public string GerarComprovante();
+        public bool Cancelar();
     }
 }
