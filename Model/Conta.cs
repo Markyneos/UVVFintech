@@ -10,7 +10,7 @@ namespace UvvFintech.Model
     {
         public Conta() {}
 
-        private Random rand = new();
+        protected readonly Random rand = new();
         protected int _id;
         public int Id { get => _id; private set => _id = value; }
         protected string _numero;
