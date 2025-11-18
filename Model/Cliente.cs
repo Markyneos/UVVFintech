@@ -82,10 +82,15 @@ namespace UvvFintech.Model
                 }
             }
         }
-        public void RemoverConta(int idConta)
+        public bool RemoverConta(int idConta)
         {
             var conta = Contas.Find(c => c.Id == idConta);
-            Contas.Remove(conta);
+            if (conta != null)
+            {
+                Contas.Remove(conta);
+                return true;
+            }
+            return false;
         }
 
         }
