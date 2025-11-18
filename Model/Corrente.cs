@@ -24,6 +24,7 @@ namespace UvvFintech.Model
             else
             {
                 _saldo -= valor;
+                Transacoes.Add(new Sacar(valor, this));
                 return true;
             }
         }

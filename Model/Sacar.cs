@@ -20,11 +20,13 @@ namespace UvvFintech.Model
         private DateTime _dataHora;
         public DateTime DataHora { get => _dataHora; }
 
+
         public Sacar(double valor, Conta conta)
         {
             _valor = valor;
             _contaRelacionada = conta;
             _dataHora = DateTime.Now;
+
         }
 
         public bool Autorizar()

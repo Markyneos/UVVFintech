@@ -16,14 +16,14 @@ namespace UvvFintech.Model
         public string Cpf { get => _cpf; }
         public string Telefone { get; set; }
         public string Email { get; set; }
-        private string _rua;
-        private int _numero;
-        private string _bairro;
-        private string _cidade;
-        public string Rua { get => _rua; }
-        public int Numero { get => _numero; }
-        public string Bairro { get => _bairro; }
-        public string Cidade { get => _cidade; }
+        private string? _rua;
+        private int? _numero;
+        private string? _bairro;
+        private string? _cidade;
+        public string? Rua { get => _rua; }
+        public int? Numero { get => _numero; }
+        public string? Bairro { get => _bairro; }
+        public string? Cidade { get => _cidade; }
         public enum TiposDeConta
         {
             Corrente,
@@ -38,14 +38,54 @@ namespace UvvFintech.Model
             Telefone = telefone;
             Email = email;
         }
-
-        public void AdicionarConta()
+        public Cliente(string senha, 
+            string cpf, 
+            string telefone, 
+            string email, 
+            string rua, 
+            int numero, 
+            string bairro, 
+            string cidade)
         {
-            Contas.Add();
+            _senha = senha;
+            _cpf = cpf;
+            Telefone = telefone;
+            Email = email;
+            _rua = rua;
+            _numero = numero;
+            _bairro = bairro;
+            _cidade = cidade;
+        }
+
+        public void AdicionarConta(TiposDeConta tipo, string senha, double saldoInicial=0)
+        {
+            if (saldoInicial == 0)
+            {
+                if (tipo is TiposDeConta.Corrente)
+                {
+                    Contas.Add(new Corrente(senha, this));
+                }
+                else
+                {
+                    Contas.Add(new Poupanca(senha, this));
+                }
+            }
+            else
+            {
+                if (tipo is TiposDeConta.Corrente)
+                {
+                    Contas.Add(new Corrente(senha, this, saldoInicial));
+                }
+                else
+                {
+                    Contas.Add(new Poupanca(senha, this, saldoInicial));
+                }
+            }
         }
         public void RemoverConta(int idConta)
         {
-            Contas.Remove(Contas.Find(c => c.Id == idConta));
+            var conta = Contas.Find(c => c.Id == idConta);
+            Contas.Remove(conta);
         }
 
         }

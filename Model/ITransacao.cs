@@ -12,7 +12,6 @@ namespace UvvFintech.Model
         double Valor { get; }
         Conta ContaRelacionada { get; }
         DateTime DataHora { get; }
-        enum MetodoDePagamento;
 
         public bool Autorizar();
         public string GerarComprovante();

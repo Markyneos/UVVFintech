@@ -41,18 +41,27 @@ namespace UvvFintech.Model
 
 
         public abstract bool Sacar(double valor);
-        public Depositar Depositar(double valor)
+        public void Depositar(double valor)
         {
             _saldo += valor;
-            return new Depositar();
+            Transacoes.Add(new Depositar(valor, this));
         }
-        public void CancelarTransacao(ITransacao transacao)
+        public bool CancelarTransacao(ITransacao transacao)
         {
-            if (transacao is Transferencia)
+            if (transacao is Transferencia transferencia)
             {
-                
+                var conta2 = transferencia.ContaRelacionada2;
+                if (conta2.Transacoes.Contains(transacao))
+                {
+                    conta2.Transacoes.Remove(transacao);
+                }
             }
-            Transacoes.Remove(transacao);
+            if (Transacoes.Contains(transacao))
+            {
+                Transacoes.Remove(transacao);
+                return true;
+            }
+            return false;
         }
         public bool AumentarLimite(double valor)
         {
