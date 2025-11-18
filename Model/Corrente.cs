@@ -8,6 +8,7 @@ namespace UvvFintech.Model
 {
     public class Corrente : Conta
     {
+        public Corrente() { }
         public Corrente(string senha, Cliente dono) : base(senha, dono)
         {
         }

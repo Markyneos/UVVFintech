@@ -8,6 +8,7 @@ namespace UvvFintech.Model
 {
     public class Poupanca : Conta
     {
+        public Poupanca() { }
         protected static double taxaDeRendimento = 0.0055;
         protected static double taxaDeSaque = 0.012;
 

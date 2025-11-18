@@ -8,23 +8,27 @@ namespace UvvFintech.Model
 {
     public class Depositar : ITransacao, ITransacaoInterna
     {
+        public Depositar() { }
+
         private int _id;
-        public int Id { get => _id; }
+        public int Id { get => _id; private set => _id = value; }
 
         private double _valor;
-        public double Valor { get => _valor; }
+        public double Valor { get => _valor; private set => _valor = value; }
 
         private Conta _contaRelacionada;
-        public Conta ContaRelacionada { get => _contaRelacionada; }
+        public Conta ContaRelacionada { get => _contaRelacionada; private set => _contaRelacionada = value; }
+        public int ContaId { get; private set; }
 
         private DateTime _dataHora;
-        public DateTime DataHora { get => _dataHora; }
+        public DateTime DataHora { get => _dataHora; private set => _dataHora = value; }
 
         public Depositar(double valor, Conta conta)
         {
             _valor = valor;
             _contaRelacionada = conta;
             _dataHora = DateTime.Now;
+            ContaId = ContaRelacionada.Id;
         }
 
         public bool Autorizar()

@@ -8,22 +8,24 @@ namespace UvvFintech.Model
 {
     public class Cliente
     {
+        public Cliente() { }
+
         private int _id;
-        public int Id { get => _id; }
+        public int Id { get => _id; private set => _id = value; }
         private string _senha;
-        public string Senha { get => _senha; }
+        public string Senha { get => _senha; private set => _senha = value; }
         private string _cpf;
-        public string Cpf { get => _cpf; }
+        public string Cpf { get => _cpf; private set => _cpf = value; }
         public string Telefone { get; set; }
         public string Email { get; set; }
         private string? _rua;
         private int? _numero;
         private string? _bairro;
         private string? _cidade;
-        public string? Rua { get => _rua; }
-        public int? Numero { get => _numero; }
-        public string? Bairro { get => _bairro; }
-        public string? Cidade { get => _cidade; }
+        public string? Rua { get => _rua; private set => _rua = value; }
+        public int? Numero { get => _numero; private set => _numero = value; }
+        public string? Bairro { get => _bairro; private set => _bairro = value; }
+        public string? Cidade { get => _cidade; private set => _cidade = value; }
         public enum TiposDeConta
         {
             Corrente,

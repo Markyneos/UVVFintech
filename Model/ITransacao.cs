@@ -11,6 +11,7 @@ namespace UvvFintech.Model
         int Id { get; }
         double Valor { get; }
         Conta ContaRelacionada { get; }
+        int ContaId { get; }
         DateTime DataHora { get; }
 
         public bool Autorizar();
