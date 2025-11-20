@@ -12,6 +12,8 @@ namespace UvvFintech.Model
 
         private int _id;
         public int Id { get => _id; private set => _id = value; }
+        private string _nome;
+        public string Nome { get => _nome; private set => _nome = value; }
         private string _senha;
         public string Senha { get => _senha; private set => _senha = value; }
         private string _cpf;
@@ -33,14 +35,16 @@ namespace UvvFintech.Model
         }
         public List<Conta> Contas = new();
 
-        public Cliente(string senha, string cpf, string telefone, string email)
+        public Cliente(string nome, string senha, string cpf, string telefone, string email)
         {
+            _nome = nome;
             _senha = senha;
             _cpf = cpf;
             Telefone = telefone;
             Email = email;
         }
-        public Cliente(string senha, 
+        public Cliente(string nome,
+            string senha, 
             string cpf, 
             string telefone, 
             string email, 
@@ -49,6 +53,7 @@ namespace UvvFintech.Model
             string bairro, 
             string cidade)
         {
+            _nome = nome;
             _senha = senha;
             _cpf = cpf;
             Telefone = telefone;

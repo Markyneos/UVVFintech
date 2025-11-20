@@ -23,6 +23,8 @@ namespace UvvFintech
         public MainWindow()
         {
             InitializeComponent();
+            this.Width = 800;
+            this.Height = 450;
             mainFrame.Navigate(new ClienteLogin());
         }
     }

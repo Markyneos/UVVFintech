@@ -141,3 +141,9 @@ C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\refint\
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\UvvFintech.pdb
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\UvvFintech.genruntimeconfig.cache
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\ref\UvvFintech.dll
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteLogin.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\MainWindowBackup.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteLogin.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\MainWindowBackup.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteCadastro.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteCadastro.baml

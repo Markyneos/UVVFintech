@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UvvFintech.Data;
+using UvvFintech.View;
+using UvvFintech.Controller;
 
 namespace UvvFintech.View
 {
@@ -24,9 +26,12 @@ namespace UvvFintech.View
         public ClienteLogin()
         {
             InitializeComponent();
+            this.Height = 450;
+            this.Width = 800;
         }
         private void logarButton_Click(object sender, RoutedEventArgs e)
         {
+
             string cpf = cpfTextBox.Text;
             var senha = senhaPasswordBox.Password;
 
@@ -41,11 +46,8 @@ namespace UvvFintech.View
             }
             else
             {
-                using var context = new AppDbContext();
-
-                var clientes = context.ClienteS.ToList();
-                var matchingCliente = clientes.Find(c => c.Cpf == cpf && c.Senha == senha);
-                if (matchingCliente is null)
+                LogarCliente lc = new(cpf, senha);
+                if (!lc.Logar())
                 {
                     MessageBox.Show(
                         "Não foi encontrado nenhuma conta de cliente com essas credenciais.",
@@ -62,6 +64,11 @@ namespace UvvFintech.View
                         MessageBoxImage.Exclamation);
                 }
             }
+        }
+
+        private void cadastrarButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new ClienteCadastro());
         }
     }
 }

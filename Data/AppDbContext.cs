@@ -26,8 +26,9 @@ namespace UvvFintech.Data
             //Tabela de Clientes
             modelBuilder.Entity<Cliente>().ToTable("Cliente");
             modelBuilder.Entity<Cliente>().Property(c => c.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Cliente>().Property(c => c.Nome).IsRequired();
             modelBuilder.Entity<Cliente>().Property(c => c.Senha).IsRequired();
-            modelBuilder.Entity<Cliente>().Property(c => c.Cpf).IsRequired().HasColumnType("char(11)").IsFixedLength();
+            modelBuilder.Entity<Cliente>().Property(c => c.Cpf).IsRequired().HasMaxLength(11);
             modelBuilder.Entity<Cliente>().Property(c => c.Telefone).IsRequired();
             modelBuilder.Entity<Cliente>().Property(c => c.Email).IsRequired();
             modelBuilder.Entity<Cliente>().Property(c => c.Rua);
