@@ -57,11 +57,7 @@ namespace UvvFintech.View
                 }
                 else
                 {
-                    MessageBox.Show(
-                        "Teste passou!!",
-                        "Teste passou",
-                        MessageBoxButton.OK,
-                        MessageBoxImage.Exclamation);
+                    ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new ClienteContas(lc.GetCliente()));
                 }
             }
         }

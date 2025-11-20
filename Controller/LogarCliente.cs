@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UvvFintech.Model;
 using UvvFintech.Data;
+using System.Windows.Automation;
 
 namespace UvvFintech.Controller
 {
@@ -34,7 +35,15 @@ namespace UvvFintech.Controller
                 {
                     return true;
                 }
-            }
+        }
+        public Cliente GetCliente()
+        {
+            using var context = new AppDbContext();
+
+            var clientes = context.ClienteS.ToList();
+            var matchingCliente = clientes.Find(c => c.Cpf == _cpf && c.Senha == _senha);
+            return matchingCliente;
         }
     }
+}
 

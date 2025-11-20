@@ -41,10 +41,10 @@ namespace UvvFintech.View
             var senha = senhaBox.Password;
             string telefone = telefoneBox.Text;
             string email = emailBox.Text;
-            string rua = enderecoBox.Text.Split(',')[0];
-            string numero = enderecoBox.Text.Split(',')[1];
-            string bairro = bairroBox.Text;
-            string cidade = cidadeBox.Text;
+            string rua = enderecoBox.Text.Split(',')[0] ?? "";
+            string numero = enderecoBox.Text.Split(',')[1] ?? "";
+            string bairro = bairroBox.Text ?? "";
+            string cidade = cidadeBox.Text ?? "";
 
             if (
                 string.IsNullOrEmpty(nome) ||

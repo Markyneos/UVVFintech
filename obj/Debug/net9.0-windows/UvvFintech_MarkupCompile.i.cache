@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Marco Antônio\source\repos\UvvFintech\App.xaml
-4-1356625114
+51840665889
 
-30-2007029614
+321805545951
 2292066254663
-View\ClienteCadastro.xaml;View\ClienteLogin.xaml;View\MainWindow.xaml;View\MainWindowBackup.xaml;
+View\ClienteCadastro.xaml;View\ClienteContas.xaml;View\ClienteLogin.xaml;View\MainWindow.xaml;View\MainWindowBackup.xaml;
 
 True
 
