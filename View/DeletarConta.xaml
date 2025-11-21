@@ -1,0 +1,22 @@
+﻿<Page x:Class="UvvFintech.View.DeletarConta"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UvvFintech.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DeletarConta">
+
+    <Grid Background="White">
+        <Label x:Name="titulo5" Content="Deletar Conta" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift SemiBold SemiCondensed"/>
+        <Label Content="Selecione a conta que deseja apagar:" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22"/>
+        <TextBox x:Name="numeroContaBox" HorizontalAlignment="Left" Margin="361,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Label Content="Número da conta:" HorizontalAlignment="Left" Margin="256,194,0,0" VerticalAlignment="Top"/>
+        <Label Content="Senha da conta:" HorizontalAlignment="Left" Margin="267,225,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="senhaContaBox" HorizontalAlignment="Left" Margin="361,229,0,0" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="apagarContaButton" Content="Apagar Conta" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="90" Click="apagarContaButton_Click"/>
+        <Button x:Name="voltarButton" Content="Voltar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="45" Click="voltarButton_Click"/>
+
+    </Grid>
+</Page>

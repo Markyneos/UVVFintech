@@ -14,5 +14,11 @@
     <Compile Update="View\ClienteLogin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\DeletarConta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RealizarTransacao.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

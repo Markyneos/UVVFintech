@@ -26,6 +26,7 @@ namespace UvvFintech.View
         public AdicionarConta(Cliente c)
         {
             InitializeComponent();
+            ((MainWindow)Application.Current.MainWindow).Title = "Adicionar conta";
             _cliente = c;
         }
 
@@ -51,17 +52,17 @@ namespace UvvFintech.View
                 string senha = senhaBox.Password;
                 if (selection == "Conta Corrente")
                 {
-                    //Corrente newConta = cc.CriarContaCorrente(senha, _cliente);
-                  //  MessageBox.Show(
-                  //      $"Conta criada! O número dela é: {newConta.Numero}",
-                  //      "Nova conta criada",
-                  //      MessageBoxButton.OK,
-                  //      MessageBoxImage.None);
-                  //  ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new ClienteContas(_cliente));
+                    Corrente newConta = cc.CriarContaCorrente(senha);
+                    MessageBox.Show(
+                        $"Conta criada! O número dela é: {newConta.Numero}",
+                        "Nova conta criada",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.None);
+                    ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new ClienteContas(_cliente));
                 }
                 else
                 {
-                    Poupanca newConta = cc.CriarContaPoupanca(senha, _cliente);
+                    Poupanca newConta = cc.CriarContaPoupanca(senha);
                     MessageBox.Show(
                         $"Conta criada! O número dela é: {newConta.Numero}",
                         "Nova conta criada",

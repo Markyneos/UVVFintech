@@ -142,12 +142,12 @@ C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\UvvFint
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\UvvFintech.genruntimeconfig.cache
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\ref\UvvFintech.dll
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteLogin.g.cs
-C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\MainWindowBackup.g.cs
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteLogin.baml
-C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\MainWindowBackup.baml
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteCadastro.g.cs
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteCadastro.baml
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteContas.g.cs
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteContas.baml
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\AdicionarConta.g.cs
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\AdicionarConta.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\DeletarConta.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\DeletarConta.baml

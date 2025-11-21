@@ -19,28 +19,20 @@ namespace UvvFintech.Controller
         public List<Conta> GetContas()
         {
             using var context = new AppDbContext();
+            context.Attach(_cliente);
             List<Conta> contas = new List<Conta>();
             var contasCorrente = context.CorrenteS.ToList();
             var contasPoupanca = context.PoupancaS.ToList();
-            contas.AddRange(contasCorrente);
-            contas.AddRange(contasPoupanca);
-            return contas;
+            var matchedCorrente = contasCorrente.FindAll(c => c.ClienteId == _cliente.Id) ?? new List<Corrente>();
+            var matchedPoupanca = contasPoupanca.FindAll(p => p.ClienteId == _cliente.Id) ?? new List<Poupanca>();
+            contas.AddRange(matchedCorrente);
+            contas.AddRange(matchedPoupanca);
+            var contasOrdenadas = contas.OrderBy(c => c.Id).ToList();
+            if (!_cliente.Contas.Any())
+            {
+                _cliente.Contas.AddRange(contasOrdenadas);
+            }
+            return contasOrdenadas;
         }
-      //  public Conta GetContaFromId(int id)
-      //  {
-      //      using var context = new AppDbContext();
-      //      try
-      //      {
-      //          var correnteMatched = context.CorrenteS.First(c => c.Id == id);
-      //          var poupancaMatched = context.PoupancaS.First(p => p.Id == id);
-      //          var contas = new List<Conta>();
-      //          contas.AddRange(correnteMatched);
-      //          contas.AddRange(poupancaMatched);
-
-      //      }
-      //      catch (Exception e)
-      //      {
-      //      }
-      //  }
     }
 }

@@ -13,7 +13,6 @@ namespace UvvFintech.Model
         protected static double taxaDeSaque = 0.012;
 
         public Poupanca(string senha, Cliente dono) : base(senha, dono) {}
-
         public Poupanca(string senha, Cliente dono, double saldoInicial) : base(senha, dono, saldoInicial) {}
 
         public override bool Sacar(double valor)

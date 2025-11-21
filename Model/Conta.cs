@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UvvFintech.Controller;
 
 namespace UvvFintech.Model
 {
@@ -27,7 +28,7 @@ namespace UvvFintech.Model
 
         public Conta(string senha, Cliente dono)
         {
-            _numero = rand.Next(10000, 100000).ToString();
+            _numero = rand.Next(1000000, 10000000).ToString();
             _senha = senha;
             _saldo = 0;
             _limiteSaque = 0;
@@ -36,21 +37,13 @@ namespace UvvFintech.Model
         }
         public Conta(string senha, Cliente dono, double saldoInicial)
         {
-            _numero = rand.Next(10000, 100000).ToString();
+            _numero = rand.Next(1000000, 10000000).ToString();
             _senha = senha;
             Dono = dono;
             _saldo = saldoInicial;
             _limiteSaque = saldoInicial * 0.50;
             ClienteId = Dono.Id;
         }
-       // public Cliente(string senha, int clienteId)
-       // {
-       //     _numero = rand.Next(10000, 100000).ToString();
-       //     _senha = senha;
-       //     _saldo = 0;
-       //     _limiteSaque = 0;
-       //     ClienteId = clienteId;
-       // }
 
 
         public abstract bool Sacar(double valor);

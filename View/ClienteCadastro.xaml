@@ -14,7 +14,7 @@
         <Label Content="Os campos com * são de preenchimento obrigatório." HorizontalAlignment="Center" Margin="0,425,0,0" VerticalAlignment="Top" Height="25" Width="196" FontSize="8"/>
         <TextBox x:Name="nomeBox" HorizontalAlignment="Center" Margin="0,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
         <TextBox x:Name="cpfBox" HorizontalAlignment="Center" Margin="0,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" MaxLength="11"/>
-        <TextBox x:Name="telefoneBox" HorizontalAlignment="Center" Margin="0,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
+        <TextBox x:Name="telefoneBox" HorizontalAlignment="Center" Margin="0,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" MaxLength="11"/>
         <TextBox x:Name="emailBox" HorizontalAlignment="Center" Margin="0,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
         <PasswordBox x:Name="senhaBox" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Width="187"/>
         <Label Content="Nome Completo*:" HorizontalAlignment="Left" Margin="201,104,0,0" VerticalAlignment="Top"/>

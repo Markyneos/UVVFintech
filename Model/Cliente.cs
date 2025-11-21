@@ -64,30 +64,42 @@ namespace UvvFintech.Model
             _cidade = cidade;
         }
 
-        public void AdicionarConta(TiposDeConta tipo, string senha, double saldoInicial=0)
+       // public void AdicionarConta(TiposDeConta tipo, string senha, double saldoInicial=0)
+       // {
+       //     if (saldoInicial == 0)
+       //     {
+       //         if (tipo is TiposDeConta.Corrente)
+       //         {
+       //             Contas.Add(new Corrente(senha, this));
+       //         }
+       //         else
+       //         {
+       //             Contas.Add(new Poupanca(senha, this));
+       //         }
+       //     }
+       //     else
+       //     {
+       //         if (tipo is TiposDeConta.Corrente)
+       //         {
+       //             Contas.Add(new Corrente(senha, this, saldoInicial));
+       //         }
+       //         else
+       //         {
+       //             Contas.Add(new Poupanca(senha, this, saldoInicial));
+       //         }
+       //     }
+       // }
+       public Corrente AdicionarContaCorrente(string senha)
         {
-            if (saldoInicial == 0)
-            {
-                if (tipo is TiposDeConta.Corrente)
-                {
-                    Contas.Add(new Corrente(senha, this));
-                }
-                else
-                {
-                    Contas.Add(new Poupanca(senha, this));
-                }
-            }
-            else
-            {
-                if (tipo is TiposDeConta.Corrente)
-                {
-                    Contas.Add(new Corrente(senha, this, saldoInicial));
-                }
-                else
-                {
-                    Contas.Add(new Poupanca(senha, this, saldoInicial));
-                }
-            }
+            Corrente novaConta = new(senha, this);
+            Contas.Add(novaConta);
+            return novaConta;
+        }
+        public Poupanca AdicionarContaPoupanca(string senha)
+        {
+            Poupanca novaConta = new(senha, this);
+            Contas.Add(novaConta);
+            return novaConta;
         }
         public bool RemoverConta(int idConta)
         {

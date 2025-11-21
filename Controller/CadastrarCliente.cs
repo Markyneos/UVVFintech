@@ -45,10 +45,6 @@ namespace UvvFintech.Controller
                 context.SaveChanges();
                 return true;
             }
-            MessageBox.Show("Já existe um usuário com esse cpf. Por favor revisar suas credenciais",
-                "CPF identificado",
-                MessageBoxButton.OK,
-                MessageBoxImage.Error);
             return false;
         }
     }

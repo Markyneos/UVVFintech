@@ -40,7 +40,7 @@ namespace UvvFintech.Data
 
             //Tabelas de Contas Corrente
             modelBuilder.Entity<Corrente>().ToTable("ContaCorrente");
-            modelBuilder.Entity<Corrente>().Property(c => c.Numero).IsRequired();
+            modelBuilder.Entity<Corrente>().HasIndex(c => c.Numero).IsUnique();
             modelBuilder.Entity<Corrente>().Property(c => c.Senha).IsRequired();
             modelBuilder.Entity<Corrente>().Property(c => c.Saldo).IsRequired().HasDefaultValue(0.00);
             modelBuilder.Entity<Corrente>().Property(c => c.LimiteSaque).IsRequired();

@@ -29,8 +29,9 @@ namespace UvvFintech.View
         public ClienteContas(Cliente c)
         {
             InitializeComponent();
+            ((MainWindow)Application.Current.MainWindow).Title = "Contas";
             _cliente = c;
-            this.titulo3.Content = $"Bem-vindo, {_cliente.Nome.Split(" ")[0]}";
+            this.titulo3.Content = $"Contas de {_cliente.Nome.Split(" ")[0]}";
             SelectContasFromCliente sCFC = new SelectContasFromCliente(_cliente);
             var contas = sCFC.GetContas();
             dataGridContas.ItemsSource = contas;
@@ -39,6 +40,21 @@ namespace UvvFintech.View
         private void criarContaButton_Click(object sender, RoutedEventArgs e)
         {
             ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new AdicionarConta(_cliente));
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new ClienteLogin());
+        }
+
+        private void deleteContaButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new DeletarConta(_cliente));
+        }
+
+        private void realizarTransacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

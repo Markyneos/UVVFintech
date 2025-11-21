@@ -9,11 +9,12 @@
       Title="ClienteContas">
 
     <Grid Background="White">
-        <Label x:Name="titulo3" Content="Bem-vindo" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift SemiBold SemiCondensed"/>
+        <Label x:Name="titulo3" Content="Contas de" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift SemiBold SemiCondensed"/>
         <DataGrid x:Name="dataGridContas" AutoGenerateColumns="True" Margin="10,63,10,130"/>
         <Button x:Name="criarContaButton" Content="Criar nova conta" HorizontalAlignment="Left" Margin="70,375,0,0" VerticalAlignment="Top" Width="101" Click="criarContaButton_Click"/>
-        <Button Content="Deletar conta" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Realizar Transação" HorizontalAlignment="Left" Margin="625,375,0,0" VerticalAlignment="Top" Width="101"/>
+        <Button x:Name="deleteContaButton" Content="Deletar conta" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" Width="100" Click="deleteContaButton_Click"/>
+        <Button x:Name="realizarTransacaoButton" Content="Realizar Transação" HorizontalAlignment="Left" Margin="625,375,0,0" VerticalAlignment="Top" Width="101" Click="realizarTransacaoButton_Click"/>
+        <Button x:Name="logoutButton" Content="Sair" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="45" Click="logoutButton_Click"/>
 
     </Grid>
 </Page>

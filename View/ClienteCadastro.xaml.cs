@@ -41,10 +41,24 @@ namespace UvvFintech.View
             var senha = senhaBox.Password;
             string telefone = telefoneBox.Text;
             string email = emailBox.Text;
-            string rua = enderecoBox.Text.Split(',')[0] ?? "";
-            string numero = enderecoBox.Text.Split(',')[1] ?? "";
-            string bairro = bairroBox.Text ?? "";
-            string cidade = cidadeBox.Text ?? "";
+            string rua;
+            string numero;
+            string bairro;
+            string cidade;
+            try
+            {
+                rua = enderecoBox.Text.Split(',')[0];
+                numero = enderecoBox.Text.Split(',')[1];
+                bairro = bairroBox.Text;
+                cidade = cidadeBox.Text;
+            }
+            catch (Exception)
+            {
+                rua = "";
+                numero = "";
+                bairro = "";
+                cidade = "";
+            }
 
             if (
                 string.IsNullOrEmpty(nome) ||
@@ -53,7 +67,8 @@ namespace UvvFintech.View
                 string.IsNullOrEmpty(telefone) ||
                 string.IsNullOrEmpty(email) ||
                 cpf.Any(char.IsLetter) ||
-                cpf.Length != 11)
+                cpf.Length != 11 ||
+                telefone.Length != 11)
             {
                 MessageBox.Show("Por favor preencha todos os dados necessários corretamente!",
                     "Erro com os dados",

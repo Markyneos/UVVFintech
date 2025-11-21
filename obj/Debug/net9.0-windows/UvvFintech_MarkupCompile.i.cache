@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Marco Antônio\source\repos\UvvFintech\App.xaml
-61867007979
+71411607203
 
-341785560923
+38-776625738
 2292066254663
-View\AdicionarConta.xaml;View\ClienteCadastro.xaml;View\ClienteContas.xaml;View\ClienteLogin.xaml;View\MainWindow.xaml;View\MainWindowBackup.xaml;
+View\AdicionarConta.xaml;View\ClienteCadastro.xaml;View\ClienteContas.xaml;View\ClienteLogin.xaml;View\DeletarConta.xaml;View\MainWindow.xaml;View\RealizarTransacao.xaml;
 
-True
+False
 

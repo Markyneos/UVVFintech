@@ -17,21 +17,23 @@ namespace UvvFintech.Controller
             _cliente = cliente;
         }
 
-        public Corrente CriarContaCorrente(string senha, int donoId)
+        public Corrente CriarContaCorrente(string senha)
         {
             using var context = new AppDbContext();
-            Corrente c = new Corrente(senha, dono);
+            Corrente c = _cliente.AdicionarContaCorrente(senha);
+            context.Attach(_cliente);
             context.CorrenteS.Add(c);
             context.SaveChanges();
             return c;
         }
-        public Poupanca CriarContaPoupanca(string senha, Cliente dono)
+        public Poupanca CriarContaPoupanca(string senha)
         {
             using var context = new AppDbContext();
-            Poupanca c = new Poupanca(senha, dono);
-            context.PoupancaS.Add(c);
+            Poupanca p = _cliente.AdicionarContaPoupanca(senha);
+            context.Attach(_cliente);
+            context.PoupancaS.Add(p);
             context.SaveChanges();
-            return c;
+            return p;
         }
     }
 }

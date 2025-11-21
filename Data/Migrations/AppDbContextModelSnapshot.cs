@@ -87,7 +87,7 @@ namespace UvvFintech.Data.Migrations
 
                     b.Property<string>("Numero")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<double>("Saldo")
                         .ValueGeneratedOnAdd()
@@ -205,6 +205,9 @@ namespace UvvFintech.Data.Migrations
             modelBuilder.Entity("UvvFintech.Model.Corrente", b =>
                 {
                     b.HasBaseType("UvvFintech.Model.Conta");
+
+                    b.HasIndex("Numero")
+                        .IsUnique();
 
                     b.ToTable("ContaCorrente", (string)null);
                 });
