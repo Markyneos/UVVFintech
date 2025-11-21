@@ -17,7 +17,7 @@ namespace UvvFintech.Controller
             _cliente = cliente;
         }
 
-        public Corrente CriarContaCorrente(string senha, Cliente dono)
+        public Corrente CriarContaCorrente(string senha, int donoId)
         {
             using var context = new AppDbContext();
             Corrente c = new Corrente(senha, dono);
