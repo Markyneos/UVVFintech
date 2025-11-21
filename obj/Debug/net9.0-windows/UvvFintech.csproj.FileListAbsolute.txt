@@ -149,3 +149,5 @@ C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Cl
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteCadastro.baml
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteContas.g.cs
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\ClienteContas.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\AdicionarConta.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\AdicionarConta.baml

@@ -30,6 +30,7 @@ namespace UvvFintech.Model
             _numero = rand.Next(10000, 100000).ToString();
             _senha = senha;
             _saldo = 0;
+            _limiteSaque = 0;
             Dono = dono;
             ClienteId = Dono.Id;
         }
@@ -37,11 +38,18 @@ namespace UvvFintech.Model
         {
             _numero = rand.Next(10000, 100000).ToString();
             _senha = senha;
-            _saldo = 0;
             Dono = dono;
             _saldo = saldoInicial;
             _limiteSaque = saldoInicial * 0.50;
             ClienteId = Dono.Id;
+        }
+        public Cliente(string senha, int clienteId)
+        {
+            _numero = rand.Next(10000, 100000).ToString();
+            _senha = senha;
+            _saldo = 0;
+            _limiteSaque = 0;
+            ClienteId = clienteId;
         }
 
 

@@ -35,5 +35,10 @@ namespace UvvFintech.View
             var contas = sCFC.GetContas();
             dataGridContas.ItemsSource = contas;
         }
+
+        private void criarContaButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new AdicionarConta(_cliente));
+        }
     }
 }

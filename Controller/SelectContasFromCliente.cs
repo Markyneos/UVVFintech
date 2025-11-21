@@ -26,5 +26,21 @@ namespace UvvFintech.Controller
             contas.AddRange(contasPoupanca);
             return contas;
         }
+      //  public Conta GetContaFromId(int id)
+      //  {
+      //      using var context = new AppDbContext();
+      //      try
+      //      {
+      //          var correnteMatched = context.CorrenteS.First(c => c.Id == id);
+      //          var poupancaMatched = context.PoupancaS.First(p => p.Id == id);
+      //          var contas = new List<Conta>();
+      //          contas.AddRange(correnteMatched);
+      //          contas.AddRange(poupancaMatched);
+
+      //      }
+      //      catch (Exception e)
+      //      {
+      //      }
+      //  }
     }
 }
