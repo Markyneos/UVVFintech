@@ -8,7 +8,7 @@ using UvvFintech.Model;
 
 namespace UvvFintech.Data
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Cliente> ClienteS { get; set; }
         public DbSet<Corrente> CorrenteS { get; set; }
