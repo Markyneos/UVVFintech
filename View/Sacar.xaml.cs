@@ -25,6 +25,7 @@ namespace UvvFintech.View
         private Conta _conta;
         public Sacar(Conta c)
         {
+            ((MainWindow)Application.Current.MainWindow).Title = "Sacar";
             InitializeComponent();
             _conta = c;
         }

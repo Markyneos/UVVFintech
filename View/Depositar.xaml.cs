@@ -25,6 +25,7 @@ namespace UvvFintech.View
         private Conta _conta;
         public Depositar(Conta c)
         {
+            ((MainWindow)Application.Current.MainWindow).Title = "Depositar";
             InitializeComponent();
             _conta = c;
         }
