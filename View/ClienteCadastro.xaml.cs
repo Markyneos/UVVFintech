@@ -68,7 +68,8 @@ namespace UvvFintech.View
                 string.IsNullOrEmpty(email) ||
                 cpf.Any(char.IsLetter) ||
                 cpf.Length != 11 ||
-                telefone.Length != 11)
+                telefone.Length != 11 ||
+                nome.Any(char.IsNumber))
             {
                 MessageBox.Show("Por favor preencha todos os dados necessários corretamente!",
                     "Erro com os dados",
