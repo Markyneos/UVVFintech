@@ -102,7 +102,7 @@ namespace UvvFintech.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UvvFintech;V1.0.0.0;component/view/transferencia.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/UvvFintech;component/view/transferencia.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\Transferencia.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -86,7 +86,7 @@ namespace UvvFintech.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UvvFintech;V1.0.0.0;component/view/depositar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/UvvFintech;component/view/depositar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\Depositar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
