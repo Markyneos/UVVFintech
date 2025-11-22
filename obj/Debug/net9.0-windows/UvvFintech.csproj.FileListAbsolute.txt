@@ -151,3 +151,16 @@ C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Ad
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\AdicionarConta.baml
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\DeletarConta.g.cs
 C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\DeletarConta.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Depositar.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\RealizarTransacao.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\TransacoesCorrente.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\TransacoesPoupanca.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Depositar.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\RealizarTransacao.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\TransacoesCorrente.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\TransacoesPoupanca.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\bin\Debug\net9.0-windows\CurrencyTextbox.dll
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Sacar.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Sacar.baml
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Transferencia.g.cs
+C:\Users\Marco Antônio\source\repos\UvvFintech\obj\Debug\net9.0-windows\View\Transferencia.baml

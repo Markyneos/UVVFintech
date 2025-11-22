@@ -33,7 +33,17 @@ namespace UvvFintech.View
             _cliente = c;
             this.titulo3.Content = $"Contas de {_cliente.Nome.Split(" ")[0]}";
             SelectContasFromCliente sCFC = new SelectContasFromCliente(_cliente);
-            var contas = sCFC.GetContas();
+            var contas = sCFC.GetContas()
+                .Select(conta => new
+                {
+                    conta.Id,
+                    conta.Numero,
+                    conta.Saldo,
+                    conta.Senha,
+                    conta.ClienteId,
+                    conta.LimiteSaque,
+                    Tipo = conta is Corrente ? "Corrente" : "Poupança"
+                }).ToList();
             dataGridContas.ItemsSource = contas;
         }
 
@@ -54,7 +64,7 @@ namespace UvvFintech.View
 
         private void realizarTransacaoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindow)Application.Current.MainWindow).mainFrame.Navigate(new RealizarTransacao(_cliente));
         }
     }
 }

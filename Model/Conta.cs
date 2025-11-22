@@ -46,11 +46,13 @@ namespace UvvFintech.Model
         }
 
 
-        public abstract bool Sacar(double valor);
-        public void Depositar(double valor)
+        public abstract Sacar Saque(double valor);
+        public Depositar Deposito(double valor)
         {
             _saldo += valor;
-            Transacoes.Add(new Depositar(valor, this));
+            Depositar d = new Depositar(valor, this);
+            Transacoes.Add(d);
+            return d;
         }
          public bool CancelarTransacao(ITransacao transacao)
         {

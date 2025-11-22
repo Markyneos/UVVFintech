@@ -17,7 +17,22 @@
     <Compile Update="View\DeletarConta.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Depositar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\RealizarTransacao.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Sacar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TransacoesCorrente.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TransacoesPoupanca.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Transferencia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

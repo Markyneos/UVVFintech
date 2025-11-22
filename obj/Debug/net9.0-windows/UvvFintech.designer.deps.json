@@ -37,6 +37,14 @@
           }
         }
       },
+      "CurrencyTextbox/2.0.2": {
+        "runtime": {
+          "lib/netcoreapp3.0/CurrencyTextbox.dll": {
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -1100,6 +1108,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "CurrencyTextbox/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2ErMGPTZcDYFLIYcefwI9M4UWFbhQPArj/R/LO+b/V3AT+cvnxvvBlIilxnXidid7L2Ej7Aw54lLWr9+r2RjGg==",
+      "path": "currencytextbox/2.0.2",
+      "hashPath": "currencytextbox.2.0.2.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

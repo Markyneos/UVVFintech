@@ -10,22 +10,25 @@ namespace UvvFintech.Model
     {
         public Poupanca() { }
         protected static double taxaDeRendimento = 0.0055;
+        public static double TaxaDeRendimento { get => taxaDeRendimento; private set => taxaDeRendimento = value; }
         protected static double taxaDeSaque = 0.012;
+        public static double TaxaDeSaque { get => taxaDeSaque; private set => taxaDeSaque = value; }
 
         public Poupanca(string senha, Cliente dono) : base(senha, dono) {}
         public Poupanca(string senha, Cliente dono, double saldoInicial) : base(senha, dono, saldoInicial) {}
 
-        public override bool Sacar(double valor)
+        public override Sacar Saque(double valor)
         {
             if ((valor * taxaDeSaque) + valor > _saldo)
             {
-                return false;
+                return null;
             }
             else
             {
                 _saldo -= (valor * taxaDeSaque) + valor;
-                Transacoes.Add(new Sacar(valor, this));
-                return true;
+                Sacar s = new(valor, this);
+                Transacoes.Add(s);
+                return s;
             }
         }
         public void AplicarRendimento()

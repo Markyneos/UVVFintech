@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Marco Antônio\source\repos\UvvFintech\App.xaml
-6-998974807
+12-678053357
 
-35-1481889235
-2292066254663
-View\AdicionarConta.xaml;View\ClienteCadastro.xaml;View\ClienteContas.xaml;View\ClienteLogin.xaml;View\DeletarConta.xaml;View\MainWindow.xaml;
+501239758042
+230-1382600442
+View\AdicionarConta.xaml;View\ClienteCadastro.xaml;View\ClienteContas.xaml;View\ClienteLogin.xaml;View\DeletarConta.xaml;View\Depositar.xaml;View\MainWindow.xaml;View\RealizarTransacao.xaml;View\Sacar.xaml;View\TransacoesCorrente.xaml;View\TransacoesPoupanca.xaml;View\Transferencia.xaml;
 
 False
 

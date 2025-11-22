@@ -47,6 +47,18 @@
           }
         }
       },
+      "CurrencyTextbox/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/CurrencyTextbox.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/CurrencyTextbox.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1638,6 +1650,21 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "CurrencyTextbox/2.0.2": {
+      "sha512": "2ErMGPTZcDYFLIYcefwI9M4UWFbhQPArj/R/LO+b/V3AT+cvnxvvBlIilxnXidid7L2Ej7Aw54lLWr9+r2RjGg==",
+      "type": "package",
+      "path": "currencytextbox/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "currencytextbox.2.0.2.nupkg.sha512",
+        "currencytextbox.nuspec",
+        "lib/net45/CurrencyTextbox.dll",
+        "lib/net47/CurrencyTextbox.dll",
+        "lib/netcoreapp3.0/CurrencyTextbox.dll",
+        "license.txt"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4705,6 +4732,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
+      "CurrencyTextBox >= 2.0.2",
       "Microsoft.EntityFrameworkCore >= 9.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.11",
@@ -4762,6 +4790,10 @@
       "net9.0-windows7.0": {
         "targetAlias": "net9.0-windows",
         "dependencies": {
+          "CurrencyTextBox": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.11, )"

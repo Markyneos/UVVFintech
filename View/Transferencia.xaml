@@ -1,0 +1,31 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UvvFintech.View"
+      xmlns:CurrencyTextBoxControl="clr-namespace:CurrencyTextBoxControl;assembly=CurrencyTextbox" x:Class="UvvFintech.View.Transferencia"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Transferencia">
+
+    <Grid Background="White">
+        <Label x:Name="titulo11" Content="Transferência" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift SemiBold SemiCondensed"/>
+
+        <Label VerticalAlignment="Top" Margin="0,128,0,0" HorizontalAlignment="Center" FontSize="22" FontFamily="Bahnschrift SemiBold SemiCondensed" Content="Insira o valor que deseja transferir e numero da conta receptora:"/>
+        <CurrencyTextBoxControl:CurrencyTextBox x:Name="valorBox" Number="{Binding Number}" HorizontalAlignment="Left" Margin="284,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="271" TextAlignment="Left" MaximumValue="50000" MinimumValue="0.01" Text=""/>
+        <Label Content="Valor:" HorizontalAlignment="Left" Margin="245,0,0,0" VerticalAlignment="Center"/>
+        <Button x:Name="prosseguirButton" Content="Prosseguir" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="84" Click="prosseguirButton_Click"/>
+        <TextBox x:Name="numeroContaBox" HorizontalAlignment="Left" Margin="284,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271"/>
+        <Label Content="Número da Conta:" HorizontalAlignment="Left" Margin="177,244,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="metodosComboBox" HorizontalAlignment="Left" Margin="284,280,0,0" VerticalAlignment="Top" Width="271" IsReadOnly="True">
+            <ComboBoxItem Content="Credito"/>
+            <ComboBoxItem Content="Debito"/>
+            <ComboBoxItem Content="Boleto"/>
+            <ComboBoxItem Content="Pix"/>
+        </ComboBox>
+        <Label Content="Método de pagamento:" HorizontalAlignment="Left" Margin="148,278,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="voltarButton" Content="Voltar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="45" Click="voltarButton_Click"/>
+
+    </Grid>
+</Page>

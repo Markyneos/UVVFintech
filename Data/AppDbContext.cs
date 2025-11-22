@@ -47,7 +47,7 @@ namespace UvvFintech.Data
 
             //Tabela de Contas Poupança
             modelBuilder.Entity<Poupanca>().ToTable("ContaPoupanca");
-            modelBuilder.Entity<Poupanca>().Property(p => p.Numero).IsRequired();
+            modelBuilder.Entity<Poupanca>().HasIndex(p => p.Numero).IsUnique();
             modelBuilder.Entity<Poupanca>().Property(p => p.Senha).IsRequired();
             modelBuilder.Entity<Poupanca>().Property(p => p.Saldo).IsRequired().HasDefaultValue(0.00);
             modelBuilder.Entity<Poupanca>().Property(p => p.LimiteSaque).IsRequired();

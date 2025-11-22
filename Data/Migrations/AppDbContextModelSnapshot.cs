@@ -216,6 +216,9 @@ namespace UvvFintech.Data.Migrations
                 {
                     b.HasBaseType("UvvFintech.Model.Conta");
 
+                    b.HasIndex("Numero")
+                        .IsUnique();
+
                     b.ToTable("ContaPoupanca", (string)null);
                 });
 

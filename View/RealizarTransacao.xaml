@@ -9,6 +9,14 @@
       Title="RealizarTransacao">
 
     <Grid Background="White">
-        
+        <Label x:Name="titulo6" Content="Realizar Transação" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Bahnschrift SemiBold SemiCondensed"/>
+        <Label Content="Insira os dados da conta que irá realizar a transação:" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22"/>
+        <TextBox x:Name="numeroContaBox" HorizontalAlignment="Left" Margin="361,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" MaxLength="7"/>
+        <Label Content="Número da conta:" HorizontalAlignment="Left" Margin="256,194,0,0" VerticalAlignment="Top"/>
+        <Label Content="Senha da conta:" HorizontalAlignment="Left" Margin="267,225,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="senhaContaBox" HorizontalAlignment="Left" Margin="361,229,0,0" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="prosseguirButton" Content="Prosseguir" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="90" Click="prosseguirButton_Click"/>
+        <Button x:Name="voltarButton" Content="Voltar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="45" Click="voltarButton_Click"/>
+
     </Grid>
 </Page>

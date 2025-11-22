@@ -16,33 +16,34 @@ namespace UvvFintech.Model
         {
         }
 
-        public override bool Sacar(double valor)
+        public override Sacar Saque(double valor)
         {
             if (valor > _saldo)
             {
-                return false;
+                return null;
             }
             else
             {
                 _saldo -= valor;
-                Transacoes.Add(new Sacar(valor, this));
-                return true;
+                Sacar novoSaque = new(valor, this);
+                Transacoes.Add(novoSaque);
+                return novoSaque;
             }
         }
-        public bool Transferir(double valor, Conta destino, Transferencia.MetodoDePagamento metodo)
+        public Transferencia Transferir(double valor, Conta destino, Transferencia.MetodoDePagamento metodo)
         {
             if (valor > _saldo)
             {
-                return false;
+                return null;
             }
             else
             {
                 _saldo -= valor;
-                destino.Depositar(valor);
                 Transferencia novaTransferencia = new(valor, this, destino, metodo);
+                destino.SomarSaldo(valor, novaTransferencia);
                 Transacoes.Add(novaTransferencia);
                 destino.Transacoes.Add(novaTransferencia);
-                return true;
+                return novaTransferencia;
             }
         }
     }
