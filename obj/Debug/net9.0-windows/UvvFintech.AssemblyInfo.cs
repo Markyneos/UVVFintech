@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UvvFintech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f050f0e6e12e8f1b33bf9162e668967dfa88a74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bf595aa90f1a098b7df1886b736d90b4c75325b")]
 [assembly: System.Reflection.AssemblyProductAttribute("UvvFintech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UvvFintech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
